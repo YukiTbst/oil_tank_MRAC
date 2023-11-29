@@ -14,7 +14,9 @@
 #define KD 9
 #define PUBLISH_FREQ 10
 #define COMMAND_RECEIVED 11
-const int paramenters_num=12;
+#define FORCE_MEAN 12
+#define FORCE_DELTA 13
+const int paramenters_num=14;
 extern bool stop;//急停标志位
 extern bool s_print;
 extern bool is_test;
