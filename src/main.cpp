@@ -21,6 +21,8 @@ union float2Byte//用于切换浮点数和字节的union
 };
 float2Byte refVal;
 float2Byte ctrlOutVal;
+float2Byte anti_force_m;
+float2Byte anti_force_d;
 //电调驱动器指针
 EscDriver* escCs;//escCs means [ESC] [c]ontroller[s]
 HardwareSerial controllerSerial(1);//与另一片esp32的通信串口
@@ -63,7 +65,7 @@ void motor_driver(void * parameter)//控制器，需要加入回传控制信号�
     }
   }
   MRAC_for_coder_slower_initialize();
-    //MRAC_for_coder_slower_step(); 
+    //MRAC_for_coder_slower_step();
 
   //Serial.println(MRAC_for_code_controller_output);
   //paramenters[REF]=paramenters[THETA];
@@ -99,7 +101,7 @@ void motor_driver(void * parameter)//控制器，需要加入回传控制信号�
               paramenters[OMEGA]=imuData.datasF[3];
               paramenters[BETA]=imuData.datasF[4];
           }
-        //   MRAC_for_coder_slower_ref=paramenters[REF];
+          //   MRAC_for_coder_slower_ref=paramenters[REF];
         //   MRAC_for_coder_slower__A[1]=-paramenters[KP]*paramenters[KP];//kp:极点的相反数
         //   MRAC_for_coder_slower__A[3]=-2*paramenters[KP];
         //   MRAC_for_coder_slowe_Gain1_Gain=paramenters[KI];//前馈
@@ -114,7 +116,7 @@ void motor_driver(void * parameter)//控制器，需要加入回传控制信号�
             controller1.d_set(paramenters[KD]);
             float vel_ref=controller1.run_one_step(paramenters[THETA], paramenters[OMEGA]);
           paramenters[U]=vel_ref;
-          float vels[2];
+          float vels[4];//前两个用于航向角调整，后两个用于模拟反力
           if(vel_ref>=0)
           {
               vels[0]=vel_ref;
@@ -125,7 +127,9 @@ void motor_driver(void * parameter)//控制器，需要加入回传控制信号�
               vels[0]=0;
               vels[1]=-vel_ref;
           }
-          for(int i=0;i<2;i++)
+          vels[2] = paramenters[FORCE_MEAN] + paramenters[FORCE_DELTA]/2;
+          vels[3] = vels[2] - paramenters[FORCE_DELTA];
+          for(int i=0;i<4;i++)
           {
               vels[i]+=20;
               if(vels[i]<20)
@@ -140,13 +144,17 @@ void motor_driver(void * parameter)//控制器，需要加入回传控制信号�
           }
           refVal.fData=paramenters[REF];
           ctrlOutVal.fData=vels[0]-vels[1];
-          byte buffer[8];
+          anti_force_m.fData = paramenters[FORCE_MEAN];
+          anti_force_d.fData = paramenters[FORCE_DELTA];
+          byte buffer[16];
           for(int i=0;i<4;i++)
           {
               buffer[i]=refVal.bData[i];
               buffer[i+4]=ctrlOutVal.bData[i];
+              buffer[i+8] = anti_force_m.bData[i];
+              buffer[i+12] = anti_force_d.bData[i];
           }
-          imuMessenger.send(buffer, 8);
+          imuMessenger.send(buffer, 16);
       }
     }
 }
@@ -204,7 +212,7 @@ void command_reader(void * parameter)
                         delay(1);
                         EEPROM.commit();     
                     }
-                    if(i!=paramenters[KD])
+                    if(d!=paramenters[KD])
                     {
                         EEPROM.writeFloat(sizeof(float)*2, paramenters[KD]);
                         delay(1);
