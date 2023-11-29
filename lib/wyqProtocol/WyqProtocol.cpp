@@ -58,6 +58,6 @@ String check_bytes_cal(String cmd_str)
 }
 void check_bytes_append(String &cmd_str)
 {
-    cmd_str+=check_bytes_cal(cmd_str)+"\n";
+    cmd_str+=check_bytes_cal(cmd_str);
     return;
 }

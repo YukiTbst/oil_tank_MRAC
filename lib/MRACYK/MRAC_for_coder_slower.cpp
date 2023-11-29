@@ -24,14 +24,14 @@
 /* Exported data definition */
 
 /* Data with Exported storage */
-real_T MRAC_for_co__InitialCondition_a = 0.0;/* Referenced by: '<Root>/ÈÅ¶¯¹Û²âÆ÷' */
-real_T MRAC_for_co_k1_InitialCondition[2] = { 0.0, 0.0 } ;/* Referenced by: '<Root>/±äÁ¿k1' */
+real_T MRAC_for_co__InitialCondition_a = 0.0;/* Referenced by: '<Root>/ï¿½Å¶ï¿½ï¿½Û²ï¿½ï¿½ï¿½' */
+real_T MRAC_for_co_k1_InitialCondition[2] = { 0.0, 0.0 } ;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
 
-real_T MRAC_for_co_k2_InitialCondition = 0.0;/* Referenced by: '<Root>/±äÁ¿k2' */
-real_T MRAC_for_code__InitialCondition[2] = { 0.0, 0.0 } ;/* Referenced by: '<Root>/²Î¿¼Ä£ÐÍ' */
+real_T MRAC_for_co_k2_InitialCondition = 0.0;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k2' */
+real_T MRAC_for_code__InitialCondition[2] = { 0.0, 0.0 } ;/* Referenced by: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
 
 real_T MRAC_for_code_controller_output;/* '<Root>/controller_output' */
-real_T MRAC_for_coder__Constant2_Value[2] = { 25.0, 65.0 } ;/* Referenced by: '<Root>/Constant2' */
+real_T MRAC_for_coder__Constant2_Value[2] = { 5.0, 2.75 } ;/* Referenced by: '<Root>/Constant2' */                                              //init:25, 65
 
 real_T MRAC_for_coder__Constant3_Value[2] = { 1.0, 2.6 } ;/* Referenced by: '<Root>/Constant3' */
 
@@ -41,24 +41,24 @@ real_T MRAC_for_coder_slower_Gain[2];  /* '<Root>/Gain' */
 real_T MRAC_for_coder_slower_Gain1;    /* '<Root>/Gain1' */
 real_T MRAC_for_coder_slower_Gain2;    /* '<Root>/Gain2' */
 real_T MRAC_for_coder_slower_Gain_Gain = 1.0;/* Referenced by: '<Root>/Gain' */
-real_T MRAC_for_coder_slower__A[4] = { 0.0, -1.0, 1.0, -2.0 } ;/* Referenced by: '<Root>/²Î¿¼Ä£ÐÍ' */
+real_T MRAC_for_coder_slower__A[4] = { 0.0, -1.0, 1.0, -2.0 } ;/* Referenced by: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
 
-real_T MRAC_for_coder_slower__A_b = 0.0;/* Referenced by: '<Root>/ÈÅ¶¯¹Û²âÆ÷' */
-real_T MRAC_for_coder_slower__B[2] = { 0.0, 1.0 } ;/* Referenced by: '<Root>/²Î¿¼Ä£ÐÍ' */
+real_T MRAC_for_coder_slower__A_b = 0.0;/* Referenced by: '<Root>/ï¿½Å¶ï¿½ï¿½Û²ï¿½ï¿½ï¿½' */
+real_T MRAC_for_coder_slower__B[2] = { 0.0, 1.0 } ;/* Referenced by: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
 
-real_T MRAC_for_coder_slower__B_m = 1.0;/* Referenced by: '<Root>/ÈÅ¶¯¹Û²âÆ÷' */
-real_T MRAC_for_coder_slower__C[4] = { 1.0, 0.0, 0.0, 1.0 } ;/* Referenced by: '<Root>/²Î¿¼Ä£ÐÍ' */
+real_T MRAC_for_coder_slower__B_m = 1.0;/* Referenced by: '<Root>/ï¿½Å¶ï¿½ï¿½Û²ï¿½ï¿½ï¿½' */
+real_T MRAC_for_coder_slower__C[4] = { 1.0, 0.0, 0.0, 1.0 } ;/* Referenced by: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
 
-real_T MRAC_for_coder_slower__C_k = 1.0;/* Referenced by: '<Root>/ÈÅ¶¯¹Û²âÆ÷' */
-real_T MRAC_for_coder_slower_k1_A[4] = { 0.0, 0.0, 0.0, 0.0 } ;/* Referenced by: '<Root>/±äÁ¿k1' */
+real_T MRAC_for_coder_slower__C_k = 1.0;/* Referenced by: '<Root>/ï¿½Å¶ï¿½ï¿½Û²ï¿½ï¿½ï¿½' */
+real_T MRAC_for_coder_slower_k1_A[4] = { 0.0, 0.0, 0.0, 0.0 } ;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
 
-real_T MRAC_for_coder_slower_k1_B[4] = { 1.0, 0.0, 0.0, 1.0 } ;/* Referenced by: '<Root>/±äÁ¿k1' */
+real_T MRAC_for_coder_slower_k1_B[4] = { 1.0, 0.0, 0.0, 1.0 } ;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
 
-real_T MRAC_for_coder_slower_k1_C[4] = { 1.0, 0.0, 0.0, 1.0 } ;/* Referenced by: '<Root>/±äÁ¿k1' */
+real_T MRAC_for_coder_slower_k1_C[4] = { 1.0, 0.0, 0.0, 1.0 } ;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
 
-real_T MRAC_for_coder_slower_k2_A = 0.0;/* Referenced by: '<Root>/±äÁ¿k2' */
-real_T MRAC_for_coder_slower_k2_B = 1.0;/* Referenced by: '<Root>/±äÁ¿k2' */
-real_T MRAC_for_coder_slower_k2_C = 1.0;/* Referenced by: '<Root>/±äÁ¿k2' */
+real_T MRAC_for_coder_slower_k2_A = 0.0;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k2' */
+real_T MRAC_for_coder_slower_k2_B = 1.0;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k2' */
+real_T MRAC_for_coder_slower_k2_C = 1.0;/* Referenced by: '<Root>/ï¿½ï¿½ï¿½ï¿½k2' */
 real_T MRAC_for_coder_slower_omega;    /* '<Root>/omega' */
 real_T MRAC_for_coder_slower_ref;      /* '<Root>/ref' */
 real_T MRAC_for_coder_slower_theta;    /* '<Root>/theta' */
@@ -174,7 +174,7 @@ void MRAC_for_coder_slower_step(void)
   /* Sum: '<Root>/Sum' incorporates:
    *  Inport: '<Root>/omega'
    *  Inport: '<Root>/theta'
-   *  StateSpace: '<Root>/²Î¿¼Ä£ÐÍ'
+   *  StateSpace: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½'
    */
   rtb_e_idx_0 = (MRAC_for_coder_slower__C[0] * MRAC_for_coder_slower_X._CSTATE[0]
                  + MRAC_for_coder_slower_X._CSTATE[1] *
@@ -222,9 +222,9 @@ void MRAC_for_coder_slower_step(void)
    *  Inport: '<Root>/ref'
    *  Inport: '<Root>/theta'
    *  Product: '<Root>/Product2'
-   *  StateSpace: '<Root>/±äÁ¿k1'
-   *  StateSpace: '<Root>/±äÁ¿k2'
-   *  StateSpace: '<Root>/ÈÅ¶¯¹Û²âÆ÷'
+   *  StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k1'
+   *  StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k2'
+   *  StateSpace: '<Root>/ï¿½Å¶ï¿½ï¿½Û²ï¿½ï¿½ï¿½'
    *  Sum: '<Root>/Sum1'
    *  Sum: '<Root>/Sum2'
    */
@@ -267,7 +267,7 @@ void MRAC_for_coder_slower_derivatives(void)
   XDot_MRAC_for_coder_slower_T *_rtXdot;
   _rtXdot = ((XDot_MRAC_for_coder_slower_T *) MRAC_for_coder_slower_M->derivs);
 
-  /* Derivatives for StateSpace: '<Root>/±äÁ¿k1' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
   _rtXdot->k1_CSTATE[0] = MRAC_for_coder_slower_k1_A[0] *
     MRAC_for_coder_slower_X.k1_CSTATE[0];
   _rtXdot->k1_CSTATE[0] += MRAC_for_coder_slower_X.k1_CSTATE[1] *
@@ -275,22 +275,22 @@ void MRAC_for_coder_slower_derivatives(void)
   _rtXdot->k1_CSTATE[0] += MRAC_for_coder_slower_k1_B[0] *
     MRAC_for_coder_slower_Gain[0];
 
-  /* Derivatives for StateSpace: '<Root>/²Î¿¼Ä£ÐÍ' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
   _rtXdot->_CSTATE[0] = MRAC_for_coder_slower__A[0] *
     MRAC_for_coder_slower_X._CSTATE[0];
 
-  /* Derivatives for StateSpace: '<Root>/±äÁ¿k1' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
   _rtXdot->k1_CSTATE[0] += MRAC_for_coder_slower_Gain[1] *
     MRAC_for_coder_slower_k1_B[2];
 
-  /* Derivatives for StateSpace: '<Root>/²Î¿¼Ä£ÐÍ' incorporates:
+  /* Derivatives for StateSpace: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' incorporates:
    *  Inport: '<Root>/ref'
    */
   _rtXdot->_CSTATE[0] += MRAC_for_coder_slower_X._CSTATE[1] *
     MRAC_for_coder_slower__A[2];
   _rtXdot->_CSTATE[0] += MRAC_for_coder_slower__B[0] * MRAC_for_coder_slower_ref;
 
-  /* Derivatives for StateSpace: '<Root>/±äÁ¿k1' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
   _rtXdot->k1_CSTATE[1] = MRAC_for_coder_slower_X.k1_CSTATE[0] *
     MRAC_for_coder_slower_k1_A[1];
   _rtXdot->k1_CSTATE[1] += MRAC_for_coder_slower_X.k1_CSTATE[1] *
@@ -298,27 +298,27 @@ void MRAC_for_coder_slower_derivatives(void)
   _rtXdot->k1_CSTATE[1] += MRAC_for_coder_slower_Gain[0] *
     MRAC_for_coder_slower_k1_B[1];
 
-  /* Derivatives for StateSpace: '<Root>/²Î¿¼Ä£ÐÍ' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
   _rtXdot->_CSTATE[1] = MRAC_for_coder_slower_X._CSTATE[0] *
     MRAC_for_coder_slower__A[1];
 
-  /* Derivatives for StateSpace: '<Root>/±äÁ¿k1' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
   _rtXdot->k1_CSTATE[1] += MRAC_for_coder_slower_Gain[1] *
     MRAC_for_coder_slower_k1_B[3];
 
-  /* Derivatives for StateSpace: '<Root>/²Î¿¼Ä£ÐÍ' incorporates:
+  /* Derivatives for StateSpace: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' incorporates:
    *  Inport: '<Root>/ref'
    */
   _rtXdot->_CSTATE[1] += MRAC_for_coder_slower_X._CSTATE[1] *
     MRAC_for_coder_slower__A[3];
   _rtXdot->_CSTATE[1] += MRAC_for_coder_slower__B[1] * MRAC_for_coder_slower_ref;
 
-  /* Derivatives for StateSpace: '<Root>/±äÁ¿k2' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k2' */
   _rtXdot->k2_CSTATE = MRAC_for_coder_slower_k2_A *
     MRAC_for_coder_slower_X.k2_CSTATE;
   _rtXdot->k2_CSTATE += MRAC_for_coder_slower_k2_B * MRAC_for_coder_slower_Gain1;
 
-  /* Derivatives for StateSpace: '<Root>/ÈÅ¶¯¹Û²âÆ÷' */
+  /* Derivatives for StateSpace: '<Root>/ï¿½Å¶ï¿½ï¿½Û²ï¿½ï¿½ï¿½' */
   _rtXdot->_CSTATE_j = MRAC_for_coder_slower__A_b *
     MRAC_for_coder_slower_X._CSTATE_j;
   _rtXdot->_CSTATE_j += MRAC_for_coder_slower__B_m * MRAC_for_coder_slower_Gain2;
@@ -369,22 +369,22 @@ void MRAC_for_coder_slower_initialize(void)
   rtmSetTPtr(MRAC_for_coder_slower_M, &MRAC_for_coder_slower_M->Timing.tArray[0]);
   MRAC_for_coder_slower_M->Timing.stepSize0 = 0.01;
 
-  /* InitializeConditions for StateSpace: '<Root>/±äÁ¿k1' */
+  /* InitializeConditions for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
   MRAC_for_coder_slower_X.k1_CSTATE[0] = MRAC_for_co_k1_InitialCondition[0];
 
-  /* InitializeConditions for StateSpace: '<Root>/²Î¿¼Ä£ÐÍ' */
+  /* InitializeConditions for StateSpace: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
   MRAC_for_coder_slower_X._CSTATE[0] = MRAC_for_code__InitialCondition[0];
 
-  /* InitializeConditions for StateSpace: '<Root>/±äÁ¿k1' */
+  /* InitializeConditions for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k1' */
   MRAC_for_coder_slower_X.k1_CSTATE[1] = MRAC_for_co_k1_InitialCondition[1];
 
-  /* InitializeConditions for StateSpace: '<Root>/²Î¿¼Ä£ÐÍ' */
+  /* InitializeConditions for StateSpace: '<Root>/ï¿½Î¿ï¿½Ä£ï¿½ï¿½' */
   MRAC_for_coder_slower_X._CSTATE[1] = MRAC_for_code__InitialCondition[1];
 
-  /* InitializeConditions for StateSpace: '<Root>/±äÁ¿k2' */
+  /* InitializeConditions for StateSpace: '<Root>/ï¿½ï¿½ï¿½ï¿½k2' */
   MRAC_for_coder_slower_X.k2_CSTATE = MRAC_for_co_k2_InitialCondition;
 
-  /* InitializeConditions for StateSpace: '<Root>/ÈÅ¶¯¹Û²âÆ÷' */
+  /* InitializeConditions for StateSpace: '<Root>/ï¿½Å¶ï¿½ï¿½Û²ï¿½ï¿½ï¿½' */
   MRAC_for_coder_slower_X._CSTATE_j = MRAC_for_co__InitialCondition_a;
 }
 
