@@ -63,7 +63,7 @@ void motor_driver(void * parameter)//控制器，需要加入回传控制信号�
     }
   }
   MRAC_for_coder_slower_initialize();
-    //MRAC_for_coder_slower_step();
+    //MRAC_for_coder_slower_step(); 
 
   //Serial.println(MRAC_for_code_controller_output);
   //paramenters[REF]=paramenters[THETA];
@@ -99,15 +99,20 @@ void motor_driver(void * parameter)//控制器，需要加入回传控制信号�
               paramenters[OMEGA]=imuData.datasF[3];
               paramenters[BETA]=imuData.datasF[4];
           }
-          MRAC_for_coder_slower_ref=paramenters[REF];
-          MRAC_for_coder_slower__A[1]=-paramenters[KP]*paramenters[KP];//kp:极点的相反数
-          MRAC_for_coder_slower__A[3]=-2*paramenters[KP];
-          MRAC_for_coder_slowe_Gain1_Gain=paramenters[KI];//前馈
-          MRAC_for_coder_slower_Gain_Gain=paramenters[KD];//反馈
-          MRAC_for_coder_slower_theta=paramenters[THETA];
-          MRAC_for_coder_slower_omega=paramenters[OMEGA];
-          MRAC_for_coder_slower_step();
-          float vel_ref=MRAC_for_code_controller_output;
+        //   MRAC_for_coder_slower_ref=paramenters[REF];
+        //   MRAC_for_coder_slower__A[1]=-paramenters[KP]*paramenters[KP];//kp:极点的相反数
+        //   MRAC_for_coder_slower__A[3]=-2*paramenters[KP];
+        //   MRAC_for_coder_slowe_Gain1_Gain=paramenters[KI];//前馈
+        //   MRAC_for_coder_slower_Gain_Gain=paramenters[KD];//反馈
+        //   MRAC_for_coder_slower_theta=paramenters[THETA];
+        //   MRAC_for_coder_slower_omega=paramenters[OMEGA];
+        //   MRAC_for_coder_slower_step();
+        //   float vel_ref=MRAC_for_code_controller_output;
+        controller1.ref_set(paramenters[REF]);
+            controller1.p_set(paramenters[KP]);
+            controller1.i_set(paramenters[KI]);
+            controller1.d_set(paramenters[KD]);
+            float vel_ref=controller1.run_one_step(paramenters[THETA], paramenters[OMEGA]);
           paramenters[U]=vel_ref;
           float vels[2];
           if(vel_ref>=0)
